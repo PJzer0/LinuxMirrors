@@ -1,0 +1,147 @@
+site_name: LinuxMirrors
+repo_name: LinuxMirrors
+repo_url: https://github.com/SuperManito/LinuxMirrors
+edit_uri: edit/main/docs/
+copyright: 'Copyright &copy; 2024 <a href="https://github.com/SuperManito" target="_blank"> SuperManito</a> <a href="https://www.netlify.com" target="_blank"><img height="64" width="64" src="/assets/images/icon/netlify.svg" style="vertical-align: -0.6em"></a>'
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  logo: assets/images/logo.png
+  name: material
+  custom_dir: docs/theme
+  language: zh
+  favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/file-document-edit-outline
+    view: material/file-eye-outline
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: fontawesome/regular/lightbulb
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 跟随系统
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: octicons/sun-16
+        name: 亮色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: octicons/moon-16
+        name: 暗黑模式
+  features:
+    - header.autohide
+    - navigation.top
+    - navigation.tabs
+    - navigation.path
+    - navigation.instant
+    - navigation.indexes
+    - navigation.footer
+    - navigation.tracking
+    - navigation.sections
+    - content.tooltips
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - announce.dismiss
+extra:
+  generator: false
+  homepage: https://linuxmirrors.cn
+  social:
+    - icon: simple/gitee
+      link: https://gitee.com/SuperManito/LinuxMirrors
+    - icon: fontawesome/brands/github
+      link: https://github.com/SuperManito/LinuxMirrors
+  analytics:
+    provider: google
+    property: G-WG7T40F7YP
+    feedback:
+      title: 此页面上的内容对你有帮助吗？
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            感谢反馈！
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            感谢反馈！使用<a href="https://github.com/SuperManito/LinuxMirrors/issues" target="_blank" rel="noopener">反馈表单</a></br>帮助我们改进此页面。
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      permalink_title: 永久链接
+      toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - abbr
+  - tables
+  - def_list
+  - attr_list
+  - footnotes
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.betterem
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/theme
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - exclude-search:
+      exclude:
+        - mirrors.md
+  - tags
+nav:
+  - "介绍": index.md
+  - "使用方法": use/index.md
+  - "软件源列表": mirrors/index.md
+  - "其它工具": other/index.md
+  - "社区": community/index.md
+  - "赞助": sponsor/index.md
